@@ -16,7 +16,7 @@ module.exports = function(responseBody,recieverNumber){
         to: recieverNumber,
         from: "+18642142077",
         body: responseBody
-    }), function(err, message) {
+    }, function(err, message) {
         // console.log(message.sid);
-    };
+    });
 }
