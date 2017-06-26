@@ -51,7 +51,7 @@ var sendTwilioSms = require ("./sendTwilioSms");
                 sendTwilioSms("The username is not registered. Please contact your Bank.", from);
             }else  if(umvaResponse.success){
                 console.log("*** Success Message PAY ***");
-                sendTwilioSms(data.success.senderMessage , from);
+                sendTwilioSms(umvaResponse.success.senderMessage , from);
                 if(umvaResponse.success.receiverMobile != null){
                     sendTwilioSms(umvaResponse.success.receiverMessage,umvaResponse.success.receiverMobile);
                 }
