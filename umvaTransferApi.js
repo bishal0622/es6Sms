@@ -15,7 +15,8 @@ module.exports = function(from,amount,username){
         umvaResponse = JSON.parse(data);
     });
 
-    console.log("umva transfer", umvaResponse);
+    console.log("umva transferssssssss", umvaResponse);
+
     return umvaResponse;
 
 }
