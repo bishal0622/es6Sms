@@ -1,6 +1,7 @@
-import Client from 'node-rest-client.Client';
+module.exports = function(from){
 
-export function umvaBalanceApi(from) {
+    var Client = require('node-rest-client').Client;
+
     var umvaToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.InVtdmEi.6FKdx5OPZ8knwOeMUTjT-M2j-zG0OD8ntRnpvXXr0VA";
 
     var client = new Client();

@@ -1,3 +1,3 @@
-import {provider} from "./provider";
+var provider = require('./provider');
 
 provider();

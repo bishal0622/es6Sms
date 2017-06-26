@@ -1,6 +1,7 @@
-import twilio from "twilio";
+module.exports = function(responseBody,recieverNumber){
 
-export function sendTwilioSms(responseBody,recieverNumber) {
+    var twilio = require('twilio');
+
     //accountSid of twilio
     var accountSid = 'ACbcb5edc921fac5d729a9e8ca2c29ae9c';
 

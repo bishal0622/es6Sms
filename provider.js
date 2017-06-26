@@ -1,14 +1,14 @@
-import express from 'express';
-import bodyParser from 'body-parser'
-import twilio from 'twilio';
-import http from 'http';
-import {checkBodySyntax} from "./checkBodySyntax";
-import {umvaBalanceApi} from "./umvaBalanceApi";
-import {umvaTransferApi} from "./umvaTransferApi";
-import {sendTwilioSms} from "./sendTwilioSms";
+module.exports = function(){
+    
+var express = require('express');
+var bodyParser = require('body-parser');
+var twilio = require('twilio');
+var checkBodySyntax = require("./checkBodySyntax");
+var umvaBalanceApi = require("./umvaBalanceApi");
+var umvaTransferApi = require("./umvaTransferApi") ;
+var sendTwilioSms = require ("./sendTwilioSms");
 
-export function provider() {
-    var app = new express();
+ var app = new express();
 
     app.use(bodyParser.urlencoded({extended: false}));
 
