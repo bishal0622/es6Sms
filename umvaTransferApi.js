@@ -10,7 +10,7 @@ module.exports = function(from,amount,username){
 
     var phoneNumberOnly = from.substring(1);
 
-    client.get("http://business.capaz.org/sms_balanceTransfer?mobile=%2B" + s +"&amount=" + amount +"&receiver=" + username + "&token=" + token, function(data, response) {
+    client.get("http://business.capaz.org/sms_balanceTransfer?mobile=%2B" + phoneNumberOnly +"&amount=" + amount +"&receiver=" + username + "&token=" + token, function(data, response) {
         console.log(JSON.parse(data));
         umvaResponse = JSON.parse(data);
     });
