@@ -46,7 +46,7 @@ var sendTwilioSms = require ("./sendTwilioSms");
             var username = splittingBody[2];
             var umvaResponse = umvaTransferApi(from, amount, username);
             console.log("umvaaREssssopose",umvaResponse);
-            if(umvaResponse.error == 400){
+            if(umvaResponse.error == 404){
                 console.log("*** Error Message PAY ***");
                 sendTwilioSms("The username is not registered. Please contact your Bank.", from);
             }else  if(umvaResponse.success){
