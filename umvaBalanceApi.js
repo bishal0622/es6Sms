@@ -1,3 +1,5 @@
+var umvaResponse;
+
 module.exports = function(from){
 
     var Client = require('node-rest-client').Client;
@@ -8,14 +10,13 @@ module.exports = function(from){
 
     var phoneNumberOnly = from.substring(1);
 
-    var umvaResponse;
-
     client.get("http://business.capaz.org/sms_balanceEnquiry?&mobile=%2B" + phoneNumberOnly + "&token=" + umvaToken, function (data, response) {
         console.log(JSON.parse(data));
         umvaResponse = JSON.parse(data);
-        console.log("umva res:::::",umvaResponse);
 
     });
+
+    console.log("umva res:::::",umvaResponse);
 
     return umvaResponse;
 }
