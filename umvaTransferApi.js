@@ -1,3 +1,5 @@
+var umvaResponse;
+
 module.exports = function(from,amount,username){
 
     var Client = require('node-rest-client').Client;
@@ -7,8 +9,6 @@ module.exports = function(from,amount,username){
     var client = new Client();
 
     var phoneNumberOnly = from.substring(1);
-
-    var umvaResponse;
 
     client.get("http://business.capaz.org/sms_balanceTransfer?mobile=%2B" + s +"&amount=" + amount +"&receiver=" + username + "&token=" + token, function(data, response) {
         console.log(JSON.parse(data));
