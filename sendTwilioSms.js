@@ -1,4 +1,5 @@
 module.exports = function(replyMsg, from) {
+    console.log("send sms");
     //accountSid of twilio
     var accountSid = 'ACbcb5edc921fac5d729a9e8ca2c29ae9c';
 
@@ -14,6 +15,6 @@ module.exports = function(replyMsg, from) {
         from: "+18642142077",
         body: replyMsg
     }, function(err, message) {
-        // console.log(message.sid);
+        console.log("error");
     });
 }
