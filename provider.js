@@ -29,6 +29,7 @@ var sendTwilioSms = require ("./sendTwilioSms");
         if (index == 0) {
             console.log('balance inquiry');
             var umvaResponse = umvaBalanceApi(from);
+            console.log(umvaResponse);
             if (umvaResponse.error == 404){
                 console.log("*** Error Message BI ***");
                 sendTwilioSms("The number is not registered. Please contact your Bank.", from);
