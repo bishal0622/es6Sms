@@ -53,7 +53,7 @@ var sendTwilioSms = require ("./sendTwilioSms");
                 console.log("*** Success Message PAY ***");
                 sendTwilioSms(data.success.senderMessage , from);
                 if(umvaResponse.success.receiverMobile != null){
-                    sendTwilioSms(data.success.receiverMessage,data.success.receiverMobile);
+                    sendTwilioSms(umvaResponse.success.receiverMessage,umvaResponse.success.receiverMobile);
                 }
             }
         }
