@@ -1,4 +1,4 @@
-module.exports = function(responseBody,recieverNumber){
+module.exports = function (responseBody, recieverNumber) {
 
     var twilio = require('twilio');
 
@@ -9,14 +9,14 @@ module.exports = function(responseBody,recieverNumber){
     var authToken = 'bb217174e9f4c2310bc0c2cb14129542';
 
     //Account login
-    var client =new twilio(accountSid, authToken);
+    var client = require('twilio')(accountSid, authToken);
 
     //Message create
     client.messages.create({
         to: recieverNumber,
         from: "+18642142077",
         body: responseBody
-    }, function(err, message) {
+    }, function (err, message) {
         // console.log(message.sid);
     });
 }
