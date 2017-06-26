@@ -15,5 +15,6 @@ module.exports = function(from){
         umvaResponse = JSON.parse(data);
     });
 
+    console.log("umva res:::::",umvaResponse);
     return umvaResponse;
 }
